@@ -1,6 +1,3 @@
-json
-math
-matplotlib
 pandas
 pandas_ta 
 requests
