@@ -394,3 +394,4 @@ zarr==2.18.4
 zict==3.0.0
 zipp==3.21.0
 zope.interface==7.2
+gunicorn
