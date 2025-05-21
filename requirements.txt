@@ -4,6 +4,5 @@ requests
 termcolor 
 plotly
 dash
-dash.dependencies 
 dash_bootstrap_components
 gunicorn
