@@ -184,4 +184,5 @@ def display_graph(stock):
 
 
 # Run app and display result inline in the notebook
-app.run()
+if __name__ == '__main__':
+    app.run(debug=True)
