@@ -3,6 +3,7 @@ import math
 import matplotlib.pylab as plt
 import matplotlib.pyplot as plt
 import pandas as pd
+import pandas_ta as ta
 import requests
 from ta.momentum import StochasticOscillator
 from ta.trend import MACD
