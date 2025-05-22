@@ -1,6 +1,6 @@
 matplotlib
 pandas
-ta 
+pandas_ta
 requests
 termcolor 
 plotly
