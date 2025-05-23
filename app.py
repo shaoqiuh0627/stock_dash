@@ -1,15 +1,4 @@
-import json
-import math
-import matplotlib.pylab as plt
-import matplotlib.pyplot as plt
-import pandas as pd
-import pandas_ta as ta
-import requests
-from ta.momentum import StochasticOscillator
-from ta.trend import MACD
-from termcolor import colored as cl
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
