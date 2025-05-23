@@ -7,6 +7,9 @@ import pandas_ta as ta
 import requests
 from ta.momentum import StochasticOscillator
 from ta.trend import MACD
+from termcolor import colored as cl
+import plotly.graph_objects as go
+from plotly.subplots import make_subplots
 
 
 # Getting income statement and balance sheet data
