@@ -40,8 +40,8 @@ def get_income_balance_sheet(stock):
 
     return income_statement_df, balance_sheet_df, PERatio
 
-    
-# Getting daily price for stock 
+
+# Getting daily price for stock
 def get_stock_daily(stock):
     stock_daily = requests.get(
         f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY"
@@ -180,7 +180,7 @@ def prepare_data(stock):
         macd,
         stock_weekly_df,
         stock_latest,
-    )  
+    )
 
 
 # Packed figure preparation into function
@@ -232,10 +232,10 @@ def make_fig(
             l=1,  # left margin
             r=5,  # right margin
             b=0,  # bottom margin
-            t=0,  # top margin
+            t=5,  # top margin
         ),
         height=200,
-        width=260,
+        width=340,
     )
 
     # Fig 2
@@ -587,7 +587,7 @@ def make_fig(
         ),
         legend=dict(yanchor="top", y=0.99, xanchor="left", x=1),
         height=654,
-        width=845,
+        width=1105,
     )
 
-    return fig_1, fig_2    
+    return fig_1, fig_2
