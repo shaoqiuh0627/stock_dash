@@ -1,4 +1,3 @@
-
 from dash import Dash, dcc, html
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
@@ -15,8 +14,33 @@ from utils import (
 
 # Dropdown list and radio button options set up
 stocks = {
-    "Apple": "AAPL",
-    "Pepsi": "PEP",
+    "Accidental Pet": "OXY",
+    "Advanced Micro Devices Inc": "AMD",
+    "Ally Finl Inc": "ALLY",
+    "Alphabet Inc": "GOOG",
+    "American Express Co": "AXP",
+    "Amazon Com": "AMZN",
+    "Apple Inc": "AAPL",
+    "Bank of America": "BAC",
+    "Chevron Corp": "CVX",
+    "Chubb Limited": "CB",
+    "Coca Cola Co": "KO",
+    "Davita Inc": "DVA",
+    "Home Depot": "HD",
+    "Jpmorgan Chase": "JPM",
+    "Kraft Heinz Co": "KHC",
+    "Kroger": "KR",
+    "Microsoft Corp": "MSFT",
+    "Moody'S Corp": "MCO",
+    "Nvidia Corporation": "NVDA",
+    "Pepsi Inc": "PEP",
+    "Progress Corp Oh": "PGR",
+    "Sirius XM": "SIRI",
+    "Starbucks Corp": "SBUX",
+    "Target": "TGT",
+    "Tesla Inc": "TSLA",
+    "Verisign": "VRSN",
+    "Walmart": "WMT",
 }
 stocks_dropdown = [{"label": i[0], "value": i[1]} for i in stocks.items()]
 
@@ -24,6 +48,9 @@ stocks_dropdown = [{"label": i[0], "value": i[1]} for i in stocks.items()]
 # Build App
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
+
+# Build App
+app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 app.layout = html.Div(
     [
@@ -51,7 +78,7 @@ app.layout = html.Div(
                                                         )
                                                     ]
                                                 ),
-                                                style={"width": 1165},
+                                                style={"width": 1515},
                                             ),
                                         ]
                                     )
@@ -71,7 +98,7 @@ app.layout = html.Div(
                                             dbc.Card(
                                                 dbc.CardBody(
                                                     [
-                                                        html.P("Select A stock:"),
+                                                        html.P("Select a stock:"),
                                                         dcc.Dropdown(
                                                             id="stock-dropdown",
                                                             options=stocks_dropdown,
@@ -83,11 +110,12 @@ app.layout = html.Div(
                                                             (
                                                                 f"The price speedometer chart displays the latest price value "
                                                                 f"to estimate the progress toward DCL value for 40 weeks and DCU "
-                                                                f"value for 52 weeks. DuPont model shows a company's fundamental "
+                                                                f"value for 52 weeks. \nDuPont model shows a company's fundamental "
                                                                 f"performance. It breaks out the different drivers of ROE into "
-                                                                f"three ratio components. The candlestick patterns and MACD gauge "
-                                                                f"the momentum of the price trend. Donchian channels can make "
-                                                                f"natural partners for a crossover strategy."
+                                                                f"three ratio components. \nThe price-to-earnings (P/E) ratio measures " 
+                                                                f"a company's share price relative to its earnings per share (EPS). "
+                                                                f"\nThe candlestick patterns and MACD gauge the momentum of the price trend. " 
+                                                                f"Donchian channels can make natural partners for a crossover strategy."
                                                             )
                                                         ),
                                                         dcc.Graph(
@@ -98,7 +126,7 @@ app.layout = html.Div(
                                                         ),
                                                     ]
                                                 ),
-                                                style={"height": 695, "width": 280},
+                                                style={"height": 695, "width": 370},
                                             ),
                                         ]
                                     )
@@ -120,7 +148,7 @@ app.layout = html.Div(
                                                         )
                                                     ]
                                                 ),
-                                                style={"height": 695, "width": 865},
+                                                style={"height": 695, "width": 1128},
                                             ),
                                         ]
                                     )
@@ -133,7 +161,7 @@ app.layout = html.Div(
                 ]
             ),
             color="dark",
-            style={"height": 825, "width": 1200},
+            style={"height": 825, "width": 1550},
         )
     ]
 )
@@ -174,6 +202,6 @@ def display_graph(stock):
     return f1, f2
 
 
-# Run app and display result inline in the notebook
+# Run app and display result in new page
 if __name__ == '__main__':
     app.run(debug=True)
