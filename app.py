@@ -49,9 +49,6 @@ stocks_dropdown = [{"label": i[0], "value": i[1]} for i in stocks.items()]
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 server = app.server
 
-# Build App
-app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
-
 app.layout = html.Div(
     [
         dbc.Card(
